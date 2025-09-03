@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const NameDisplay = () => {
+export const NameDisplay = ({ name }) => {
   return (
-    <div>NameDisplay</div>
+    <div>{name}</div>
   )
 }
