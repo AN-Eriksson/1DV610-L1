@@ -10,12 +10,16 @@ function App() {
     <div className='min-h-screen flex items-center justify-center bg-gray-300'>
       {!nameSubmitted && (
         <InputForm
-          // name={name}
+          name={name}
           setName={setName}
           nameSubmitted={nameSubmitted}
           setNameSubmitted={setNameSubmitted} />
       )}
-      {/* <NameDisplay name={name} /> */}
+
+      {nameSubmitted && (
+        <NameDisplay name={name} />
+      )}
+
     </div>
   )
 }

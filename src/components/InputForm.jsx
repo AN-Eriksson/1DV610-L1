@@ -1,9 +1,7 @@
-import React from 'react'
 import { useState } from 'react'
 
 export const InputForm = ({ setName, setNameSubmitted }) => {
   const [inputValue, setInputValue] = useState("")
-
 
   const handleSubmit = (event) => {
     event.preventDefault()
