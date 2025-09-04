@@ -11,17 +11,17 @@ export const InputForm = ({ setName, setNameSubmitted }) => {
 
   return (
     <div>
-      <h2>Vad heter du?</h2>
+      <h1>Hej! Vad heter du?</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           onChange={(event) => setInputValue(event.target.value)}
-          className='border'
+          className='border rounded-xs'
           placeholder='Namn'
         />
         <button
           type='submit'
-          className='border rounded-l'
+          className='border rounded-sm mx-4 w-10'
         >Kör!
         </button>
       </form>

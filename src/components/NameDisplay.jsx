@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const NameDisplay = ({ name }) => {
   const [displayedString, setDisplayedString] = useState("")
@@ -10,8 +10,12 @@ export const NameDisplay = ({ name }) => {
       if (currentStringIndex < name.length) {
         setDisplayedString(name.slice(0, currentStringIndex + 1))
         currentStringIndex++
+      } else {
+        clearInterval(writeTimer)
       }
     }, 1000)
+
+    return () => clearInterval(writeTimer)
   }, [name])
 
 
