@@ -3,12 +3,19 @@ import { InputForm } from './components/InputForm'
 import { NameDisplay } from './components/NameDisplay'
 
 function App() {
-  const [name, setName] = useState("default")
+  const [name, setName] = useState("")
+  const [nameSubmitted, setNameSubmitted] = useState(false)
 
   return (
-    <div>
-      <InputForm name={name} setName={setName}/>
-      <NameDisplay name={name} />
+    <div className='min-h-screen flex items-center justify-center bg-gray-300'>
+      {!nameSubmitted && (
+        <InputForm
+          // name={name}
+          setName={setName}
+          nameSubmitted={nameSubmitted}
+          setNameSubmitted={setNameSubmitted} />
+      )}
+      {/* <NameDisplay name={name} /> */}
     </div>
   )
 }
