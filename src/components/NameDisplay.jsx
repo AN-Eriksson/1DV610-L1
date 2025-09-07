@@ -21,7 +21,6 @@ export const NameDisplay = ({ name }) => {
     const nameInRobberLanguage = translateToRobberLanguage(name)
 
     let currentStringIndex = 0
-
     const writeTimer = setInterval(() => {
       if (currentStringIndex < nameInRobberLanguage.length) {
         setDisplayedString(nameInRobberLanguage.slice(0, currentStringIndex + 1))
