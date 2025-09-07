@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { InputForm } from './components/InputForm'
 import { NameDisplay } from './components/NameDisplay'
-import { RobberLanguage } from './components/RobberLanguage'
 
 function App() {
   const [name, setName] = useState("")
@@ -20,7 +19,6 @@ function App() {
       {nameSubmitted && (
         <>
           <NameDisplay name={name} />
-          <RobberLanguage name={name} />
         </>
       )}
 
